@@ -51,20 +51,31 @@ class _LoginpageState extends State<Loginpage> {
       onPressed: (){},
     );
 
-    return Scaffold(
-      backgroundColor: Colors.white,
-      body: Center(
-        child: ListView(
-          shrinkWrap: true,
-          padding: EdgeInsets.only(left: 24.0, right: 24.0),
-          children: <Widget>[
-            loginButton,
-            forgotlabel,
-            SizedBox(height: 24.0),
-            signupButton,
+    return Stack(
+      children: <Widget>[
+        Image.asset('images/hl-app.jpg'),
+        Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+              image: AssetImage("/home/juan/Billeder/hl-app.jpg"),
+              fit: BoxFit.cover),
+        ),
+    ),
+        Container(
+          child: Center(
+           child: ListView(
+             shrinkWrap: true,
+             padding: EdgeInsets.only(left: 24.0, right: 24.0),
+             children: <Widget>[
+               loginButton,
+               forgotlabel,
+               SizedBox(height: 24.0),
+               signupButton,
           ],
         ),
-      ),
+        ),
+        ),
+     ],
     );
   }
 }
